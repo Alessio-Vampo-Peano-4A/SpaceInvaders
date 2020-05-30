@@ -17,7 +17,7 @@ import javax.imageio.ImageIO;
 
 /**
  *
- * @author Lenovo
+ * @author aless
  */
 public class Intro extends Space {
 
@@ -41,8 +41,8 @@ public class Intro extends Space {
     public void paint() throws IOException {
         addKeyListener(new KeyInputHandler());
         requestFocus();
-        BufferedImage alien = ImageIO.read(new File("C:/Users/Lenovo/Desktop/spaceInvaders/alien.png"));
-        BufferedImage ship = ImageIO.read(new File("C:/Users/Lenovo/Desktop/spaceInvaders/ship.png"));
+        BufferedImage alien = ImageIO.read(new File(""));
+        BufferedImage ship = ImageIO.read(new File(""));
         Graphics2D g = (Graphics2D) strategy.getDrawGraphics();
         for (int k = 0; k < 400; k += 40) {
             g.drawImage(alien, 2 * 4 + k, 50, 50, 50, null);
@@ -54,7 +54,7 @@ public class Intro extends Space {
         g.setFont(new Font(Font.SANS_SERIF, Font.BOLD, 40 + i));
         g.drawString("Space Invaders", 100 + i, 100 + i);
         g.setFont(new Font(Font.SANS_SERIF, Font.PLAIN, 10 + i));
-        g.drawString("          by Giacomo Morello", 110 + i + i, 110 + i + i);
+        g.drawString("          by Alessio Vampo", 110 + i + i, 110 + i + i);
         g.dispose();
         strategy.show();
     }
